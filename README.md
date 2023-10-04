@@ -32,8 +32,9 @@ discount = 0
 - assegnare variabile prezzo finale con la formula prezzo base - discount
  ### stampare il prezzo del biglietto sul browser
 - inserire nell'HTML un tag con id = "finalPrice"
+- creare una variabile finalPriceMessage combinandola con il valore della variabile finalPrice
 - richiamare l'elemento del Dom con id = "finalPrice"
-- aggiungere l'innerHTML del tag con il valore della variabile finalPrice
+- aggiungere l'innerHTML del tag con il valore della variabile finalPrice e la stringa finalPriceMessage
 
 
 
