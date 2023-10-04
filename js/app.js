@@ -10,36 +10,33 @@
 // - dichiarare una variabile chilometri
 // - assegnare variabile km tramite un prompt
 // - trasformare le variabili da stringhe a numeri
-const chilometri = parseInt (prompt('Inserisci il numero di chilometri da percorrere:'))
+const chilometri = parseInt (prompt('Inserisci il numero di chilometri da percorrere:'));
 // ### chiedere all'utente l'età
 // - dichiarare una variabile età
 // - assegnare variabile età tramite un prompt
 // - trasformare le variabili da stringhe a numeri
-const età = parseInt (prompt('Inserisci la tua età:'))
-console.log (chilometri, età)
+const età = parseInt (prompt('Inserisci la tua età:'));
+console.log (chilometri, età);
 // ### calcolare il prezzo base del biglietto
 // - dichiarare una variabile prezzo base
 // - calcolare il prezzo base moltiplicandolo per la tariffa di 0.21
-let ticketPrice = (chilometri) * (0.21)
-console.log(ticketPrice)
+let ticketPrice = (chilometri) * (0.21);
+console.log(ticketPrice);
 // ### creare variabile discount 
-// - dichiarare una variabile discount
-let discount;
+// - dichiarare una variabile discount = 0 in modo che quando l'età è compresa fra i due valori al finalPrice verrà sottratto il valore 0
+let discount = 0;
 // - non assegnare nessun valore definito perchè verrà calcolato successivamente richiamando il nome della variabile stessa
 // ### calcolare entità dello sconto in base all'età
 // - SE età <= 17 
 // discount = prezzo base * 0,2
 // - ALTRIMENTI SE età >= 65 
 // discount = prezzo base * 0,4
-// - ALTRIMENTI 
-// discount = 0 
+
 if (età <= 17) {
-    discount = (ticketPrice) * (0.2)
+    discount = (ticketPrice) * (0.2);
 } else if (età >= 65) {
-    discount = (ticketPrice) * (0.4)
-} else {
-    discount = 0;
-}
+    discount = (ticketPrice) * (0.4);
+} 
 console.log (discount)
 
 // ### calcolare il prezzo finale 
