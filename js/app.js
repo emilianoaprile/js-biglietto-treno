@@ -8,14 +8,19 @@
 
 // ### chiedere all'utente il numero di chilometri
 // - dichiarare una variabile chilometri
-// - assegnare variabile km tramite un prompt 
+// - assegnare variabile km tramite un prompt
+// - trasformare le variabili da stringhe a numeri
+const chilometri = parseInt (prompt('Inserisci il numero di chilometri da percorrere:'))
 // ### chiedere all'utente l'età
 // - dichiarare una variabile età
-// - assegnare variabile età tramite un prompt 
-// ### trasformare i chilometri e l'età da stringa a numero 
+// - assegnare variabile età tramite un prompt
 // - trasformare le variabili da stringhe a numeri
+const età = parseInt (prompt('Inserisci la tua età:'))
+console.log (chilometri, età)
 // ### calcolare il prezzo base del biglietto
 // - dichiarare una variabile prezzo base
+let ticketPrice = Math.floor((chilometri) * (0.21))
+console.log(ticketPrice)
 // - calcolare il prezzo base moltiplicandolo per la tariffa di 0.21
 // ### creare variabile discount 
 // - dichiarare una variabile discount
