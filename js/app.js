@@ -25,7 +25,6 @@ console.log(ticketPrice);
 // ### creare variabile discount 
 // - dichiarare una variabile discount = 0 in modo che quando l'età è compresa fra i due valori al finalPrice verrà sottratto il valore 0
 let discount = 0;
-let finalPrice;
 // - non assegnare nessun valore definito perchè verrà calcolato successivamente richiamando il nome della variabile stessa
 // ### calcolare entità dello sconto in base all'età
 // - SE età <= 17 
@@ -35,14 +34,14 @@ let finalPrice;
 
 if (eta <= 17) {
     discount = (ticketPrice) * (0.2);
-} else if (età >= 65) {
+} else if (eta >= 65) {
     discount = (ticketPrice) * (0.4);
 } 
 console.log (discount)
 // ### calcolare il prezzo finale 
 // - dichiarare una variabile prezzo finale
 // - assegnare variabile prezzo finale con la formula prezzo base - discount
-finalPrice = ticketPrice - discount;
+let finalPrice = ticketPrice - discount;
 console.log(finalPrice);
 // ### stampare il prezzo del biglietto sul browser
 // - inserire nell'HTML un tag con id = "finalPrice"
