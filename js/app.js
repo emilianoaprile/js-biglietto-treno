@@ -19,11 +19,12 @@ const età = parseInt (prompt('Inserisci la tua età:'))
 console.log (chilometri, età)
 // ### calcolare il prezzo base del biglietto
 // - dichiarare una variabile prezzo base
-let ticketPrice = Math.floor((chilometri) * (0.21))
-console.log(ticketPrice)
 // - calcolare il prezzo base moltiplicandolo per la tariffa di 0.21
+let ticketPrice = (chilometri) * (0.21)
+console.log(ticketPrice)
 // ### creare variabile discount 
 // - dichiarare una variabile discount
+let discount;
 // - non assegnare nessun valore definito perchè verrà calcolato successivamente richiamando il nome della variabile stessa
 // ### calcolare entità dello sconto in base all'età
 // - SE età <= 17 
@@ -32,6 +33,15 @@ console.log(ticketPrice)
 // discount = prezzo base * 0,4
 // - ALTRIMENTI 
 // discount = 0 
+if (età <= 17) {
+    discount = (ticketPrice) * (0.2)
+} else if (età >= 65) {
+    discount = (ticketPrice) * (0.4)
+} else {
+    discount = 0;
+}
+console.log (discount)
+
 // ### calcolare il prezzo finale 
 // - dichiarare una variabile prezzo finale
 // - assegnare variabile prezzo finale con la formula prezzo base - discount
