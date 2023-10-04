@@ -15,8 +15,8 @@ const chilometri = parseInt (prompt('Inserisci il numero di chilometri da percor
 // - dichiarare una variabile età
 // - assegnare variabile età tramite un prompt
 // - trasformare le variabili da stringhe a numeri
-const età = parseInt (prompt('Inserisci la tua età:'));
-console.log (chilometri, età);
+const eta = parseInt (prompt('Inserisci la tua età:'));
+console.log (chilometri, eta);
 // ### calcolare il prezzo base del biglietto
 // - dichiarare una variabile prezzo base
 // - calcolare il prezzo base moltiplicandolo per la tariffa di 0.21
@@ -25,6 +25,7 @@ console.log(ticketPrice);
 // ### creare variabile discount 
 // - dichiarare una variabile discount = 0 in modo che quando l'età è compresa fra i due valori al finalPrice verrà sottratto il valore 0
 let discount = 0;
+let finalPrice;
 // - non assegnare nessun valore definito perchè verrà calcolato successivamente richiamando il nome della variabile stessa
 // ### calcolare entità dello sconto in base all'età
 // - SE età <= 17 
@@ -32,18 +33,26 @@ let discount = 0;
 // - ALTRIMENTI SE età >= 65 
 // discount = prezzo base * 0,4
 
-if (età <= 17) {
+if (eta <= 17) {
     discount = (ticketPrice) * (0.2);
 } else if (età >= 65) {
     discount = (ticketPrice) * (0.4);
 } 
 console.log (discount)
-
 // ### calcolare il prezzo finale 
 // - dichiarare una variabile prezzo finale
 // - assegnare variabile prezzo finale con la formula prezzo base - discount
-let finalPrice = ticketPrice - discount
-console.log(finalPrice)
+finalPrice = ticketPrice - discount;
+console.log(finalPrice);
+// ### stampare il prezzo del biglietto sul browser
+// - inserire nell'HTML un tag con id = "finalPrice"
+// - creare una variabile finalPriceMessage combinandola con il valore della variabile finalPrice
+const finalPriceMessage = `Il prezzo del tuo biglietto è: ${finalPrice.toFixed(2)} €`;
+// - richiamare l'elemento del Dom con id = "finalPrice"
+const finalPriceDomElement = document.getElementById('finalPrice');
+// - aggiungere l'innerHTML del tag con il valore della variabile finalPrice e la stringa finalPriceMessage
+finalPriceDomElement.innerHTML = finalPriceMessage;
+
 
 
 
