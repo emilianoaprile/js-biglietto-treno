@@ -45,6 +45,8 @@ console.log (discount)
 // ### calcolare il prezzo finale 
 // - dichiarare una variabile prezzo finale
 // - assegnare variabile prezzo finale con la formula prezzo base - discount
+let finalPrice = ticketPrice - discount
+console.log(finalPrice)
 
 
 
