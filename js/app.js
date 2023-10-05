@@ -34,7 +34,7 @@ let discount = 0;
 // discount = prezzo base * 0,2
 // - ALTRIMENTI SE età >= 65 
 // discount = prezzo base * 0,4
-if (eta <= 17) {
+if (eta < 18) {
     discount = ticketPrice * 0.2;
     
 } else if (eta >= 65) {
